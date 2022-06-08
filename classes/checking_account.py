@@ -9,8 +9,8 @@ class checkingAccount(Account):
         if self.balance > (amount + 1):
             super().withdraw(amount+1)
         else:
-            print("Warning: Insufficient funds.")
-            return f"${self.balance}"
+            return f"Warning: Insufficient funds. Current balance: {self.balance}"
+        return f"Current balance: {self.balance}"
         
     def withdraw_using_check(self, amount):
         if self.checks_used < 3:
@@ -18,14 +18,14 @@ class checkingAccount(Account):
                 self.balance -= amount
                 self.checks_used += 1
             else:
-                print("Warning: Insufficient funds.")
+                return("Warning: Insufficient funds.")
         else:
             if ((self.balance - (amount+2)) >= -10):
                 self.balance -= (amount+2)
                 self.checks_used += 1
             else:
-                print("Warning: Insufficient funds.")
-        return f"${self.balance}"
+                return("Warning: Insufficient funds.")
+        return f"{self.balance}"
     
     def reset_checks(self):
         self.checks_used = 0

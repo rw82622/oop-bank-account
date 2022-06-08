@@ -12,7 +12,7 @@ class SavingsAccount(Account):
             super().withdraw(amount+2)
         else:
             print("Warning: Insufficient funds.")
-            return f"${self.balance}"
+        return f"{self.balance}"
         
     def add_interest(self, rate):
         interest_amount = (rate/100) * self.balance 
