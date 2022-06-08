@@ -1,6 +1,8 @@
 from classes.bank import Bank
 from classes.account import Account
 from classes.owner import Owner
+from classes.checking_account import checkingAccount
+from classes.savings_account import SavingsAccount
 import csv
 
 chase = Bank('JP Morgan Chase')
@@ -26,6 +28,13 @@ try:
             matching_account.owner = current_line[1]
         print("Successfully created instances of the Owner class using data from owner.csv")
         
-    chase.list_accounts()
+    # chase.list_accounts()
+    # myAccount = Account.find(15155)
+    # myAccount.add_owner(25)
+    # print(myAccount.owner)
+    # my_checking_account = checkingAccount(82622, 1000, '2003-11-07 11:34:56 -0800', '14')
+    # print(my_checking_account.get_balance())
+    # print(my_checking_account.withdraw(100))
+    # print(my_checking_account.get_balance())
 except:
     print("Error in process.")

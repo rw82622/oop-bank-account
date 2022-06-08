@@ -1,4 +1,4 @@
-from account import Account
+from classes.account import Account
 
 class checkingAccount(Account):
     def __init__(self, id, initial_bal, open_date, owner=None):

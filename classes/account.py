@@ -38,6 +38,6 @@ class Account:
     @classmethod
     def find(self, account_id):
         for item in Account.list_of_all_accounts:
-            if item.id == account_id:
+            if int(item.id) == account_id:
                 return item
             
