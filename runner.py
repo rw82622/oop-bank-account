@@ -28,7 +28,7 @@ try:
             matching_account.owner = current_line[1]
         print("Successfully created instances of the Owner class using data from owner.csv")
         
-    # chase.list_accounts()
+    chase.list_accounts()
     # myAccount = Account.find(15155)
     # myAccount.add_owner(25)
     # print(myAccount.owner)
